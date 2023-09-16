@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+}
+
+table {
+    margin: 1em auto;
+}
+
+td {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid;
+    text-align: center;
+}
+
+td input {
+    border: none;
+    height: 95%;
+    width: 90%;
+    text-align: center;
+}
+
+td:first-child {
+    border-left: solid;
+}
+
+td:nth-child(3n) {
+    border-right: solid;
+}
+
+tr:first-child {
+    border-top: solid;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: solid;
+}
+
+button {
+    text-align: center;
+}
