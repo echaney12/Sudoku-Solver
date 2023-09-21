@@ -9,117 +9,21 @@
 </head>
 <body>
     <h1>Sudoku Solver</h1>
-    <table>
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
+    <hr>
+    <h2 id="errors">0</h2>
 
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
-        
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
+    <button class="start-btn">Start Game</button>
+    <button class="solve-btn">Solve</button>
+    <br>
+    <br>
 
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
+    <!-- board -->
+    <div id="grid"></div>
+    <br>
+    <div id="digits"></div>
+    <br>
+    <div id="test"></div>
 
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
-
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
-
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
-
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
-
-        <tr>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-            <td><input type="text" name="" id="" maxlength="1"></td>
-        </tr>
-    </table>
-    <button type="submit" id="generate">Generate</button>
-    <button type="submit" id="check">Check Solution</button>
-    <button type="submit" id="solve">Solve</button>
+    <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>

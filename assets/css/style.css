@@ -2,41 +2,90 @@ body {
     text-align: center;
 }
 
-table {
-    margin: 1em auto;
+hr {
+    width: 500px;
 }
 
-td {
+.start-btn {
+    width: 100px;
+    height: 50px;
+    background-color: lightgrey;
+
     display: inline-block;
-    height: 30px;
-    width: 30px;
-    border: 1px solid;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-td input {
-    border: none;
-    height: 95%;
-    width: 90%;
-    text-align: center;
+.solve-btn {
+    width: 100px;
+    height: 50px;
+    background-color: lightgrey;
+    margin: 0 auto;
+
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
 
-td:first-child {
-    border-left: solid;
+#errors {
+    color: coral;
 }
 
-td:nth-child(3n) {
-    border-right: solid;
+#grid {
+    width: 450px;
+    height: 450px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-tr:first-child {
-    border-top: solid;
+.tile {
+    width: 48px;
+    height: 48px;
+    border: 1px solid lightgray;
+
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-tr:nth-child(3n) td {
-    border-bottom: solid;
+.tile-start {
+    background-color: whitesmoke;
 }
 
-button {
-    text-align: center;
+.horizontal-line {
+    border-bottom: 1px solid black;
+}
+
+.vertical-line {
+    border-right: 1px solid black;
+}
+
+#digits {
+    width: 450px;
+    height: 50px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number {
+    width: 44px;
+    height: 44px;
+    border: 1px solid black;
+    margin: 2px;
+
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-selected {
+    background-color: grey;
 }
