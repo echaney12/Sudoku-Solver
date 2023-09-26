@@ -1,5 +1,20 @@
 //initializes board
-const drawBoard = () => {
+function drawBoard() {
+    /* generates number selectors */
+    for(let i=1; i<=9; i++) {
+        let number = document.createElement("div");
+        number.id = i;
+        number.innerText = i;
+        // number.addEventListener("click", function() {
+        //     if(this.closest(".number-selected") != null) {
+        //         this.closest(".number-selected").classList.remove("number-selected");
+        //     }
+        //     this.classList.add("number-selected");
+        // });
+        number.classList.add("number");
+        document.getElementById("digits").appendChild(number);
+    }
+
     /* loops through each tile to create a tile container */
     for(let r=0; r<9; r++) {
         for(let c=0; c<9; c++) {
@@ -17,16 +32,6 @@ const drawBoard = () => {
             tile.classList.add("tile");
             document.getElementById("grid").appendChild(tile);
         }
-    }
-
-    /* generates number selectors */
-    for(let i=1; i<=9; i++) {
-        let number = document.createElement("div");
-        number.id = i;
-        number.innerText = i;
-        //number.addEventListener("click", selectNumber);
-        number.classList.add("number");
-        document.getElementById("digits").appendChild(number);
     }
 };
 
