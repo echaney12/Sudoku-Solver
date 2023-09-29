@@ -105,7 +105,6 @@ export class Sudoku {
         }
 
         if(col === this.N) {
-            console.log(row);
             row+=1;
             col=0;
         }
@@ -127,13 +126,23 @@ export class Sudoku {
     }
 
     removeTiles() {
-        const removed = [];
-        
+        let c = this.K
+        while(c > 0) {
+            let row = Math.floor(Math.random() * this.N);
+            let col = Math.floor(Math.random() * this.N);
+            if(this.grid[row][col] !== 0) {
+                c--;
+                this.grid[row][col] = 0;
+            }
+        }
     }
 
     fillGrid() {
         this.fillDBOxes()
         this.solve(0, this.boxLen);
-        this.sol = this.grid;
+        this.sol = this.grid.map(function(arr) {
+            return arr.slice();
+        });
+        this.removeTiles();
     }
 }
