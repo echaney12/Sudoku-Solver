@@ -5,12 +5,6 @@ function drawBoard() {
         let number = document.createElement("div");
         number.id = i;
         number.innerText = i;
-        // number.addEventListener("click", function() {
-        //     if(this.closest(".number-selected") != null) {
-        //         this.closest(".number-selected").classList.remove("number-selected");
-        //     }
-        //     this.classList.add("number-selected");
-        // });
         number.classList.add("number");
         document.getElementById("digits").appendChild(number);
     }
@@ -30,6 +24,7 @@ function drawBoard() {
             }
             //tmp
             tile.classList.add("tile");
+            tile.classList.add("undefined");
             document.getElementById("grid").appendChild(tile);
         }
     }
