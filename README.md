@@ -1,7 +1,7 @@
 # Sudoku-Solver
 Web application that generates a random sudoku for you to solve, and if you reach the 
 try limit the game will terminate. It also includes a button that fills in the missing
-values of the sudoku.
+values of the sudoku if you get stuck.
 
 ## Algorithm
 To generate the sudoku first the boxes on the diagonal were filled in randomly to avoid
