@@ -3,8 +3,10 @@ import { drawBoard } from "./draw_board.js";
 
 /* Global Variable */
 let selectedNum = null;
-
-let sudoku = new Sudoku(9, 40);
+let ERROR = 0;
+const DIFF = 40;
+let COUNT = DIFF;
+let sudoku = new Sudoku(9, COUNT);
 
 /* initializing the board */
 drawBoard();
@@ -29,6 +31,16 @@ drawBoard();
             if(selectedNum.id == sudoku.sol[row][col]) {
                 this.innerText = selectedNum.id;
                 this.classList.add("undefined");
+                COUNT--;
+                if(COUNT == 0) {
+                    document.getElementById("message").innerText = "Well Done!";
+                }
+            } else {
+                document.getElementById("errors").innerText = `${++ERROR} / 5`;
+                if(ERROR == 5) {
+                    solution();
+                    document.getElementById("message").innerText = "Good Job! Try again next time.";
+                }
             }
         }
     });
@@ -36,9 +48,10 @@ drawBoard();
 
 /* initializes the board when button clicked */
 document.querySelector(".start-btn").addEventListener("click", function() {
-    sudoku = new Sudoku(9, 40);
+    COUNT = DIFF;
+    sudoku = new Sudoku(9, COUNT);
     sudoku.fillGrid();
-    sudoku
+    document.getElementById("message").innerText = "";
     for(let r=0; r<9; r++) {
         for(let c=0; c<9; c++) {
             const tile = document.getElementById(`${r}-${c}`);
@@ -53,8 +66,8 @@ document.querySelector(".start-btn").addEventListener("click", function() {
     }
 });
 
-/* solves board when solve button clicked */
-document.querySelector(".solve-btn").addEventListener("click", function() {
+/* fills in solution */
+function solution() {
     for(let r=0; r<9; r++) {
         for(let c=0; c<9; c++) {
             const tile = document.getElementById(`${r}-${c}`);
@@ -64,4 +77,8 @@ document.querySelector(".solve-btn").addEventListener("click", function() {
             }
         }
     }
-});
+    document.getElementById("message").innerText = "Good Effort! Give it another shot."
+}
+
+/* solves board when solve button clicked */
+document.querySelector(".solve-btn").addEventListener("click", solution);
